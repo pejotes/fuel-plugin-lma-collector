@@ -32,6 +32,9 @@ local processes_map = {
 }
 
 function replace_dot_by_sep (str)
+    if str == nil then
+        return -1
+    end
     return string.gsub(str, '%.', sep)
 end
 
